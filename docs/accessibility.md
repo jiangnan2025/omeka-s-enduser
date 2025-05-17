@@ -1,31 +1,32 @@
 # Accessibility Statement
+无障碍声明
 
-The Omeka team is committed to making Omeka S an accessible option for building collections and exhibits online. We are working to make the core code accessible and will continue to make accessibility for persons with disabilities a priority as we develop the code. Omeka strives to adhere to [W3C web design standards](http://www.w3.org/standards/){target=_blank} and to be compliant with [Section 508](http://www.section508.gov/){target=_blank} of the Americans with Disabilities Act.
+Omeka 团队致力于让 Omeka S 成为一个在构建在线收藏与展示时具备无障碍功能的选项。我们正在努力使核心代码具备良好的无障碍性，并将在开发过程中继续优先考虑残障人士的可访问性需求。Omeka 力求遵循 [W3C 网页设计标准](http://www.w3.org/standards/)，并符合《美国残障人士法案》的 [Section 508](http://www.section508.gov/) 要求。
 
-For more information, please review the following reports:
+欲了解更多信息，请查阅以下报告：
 
-- Omeka S version 3.x [Accessibility Conformance Report, using VPAT 2.4 Revised International Standards](files/OmekaS3x_ACR.pdf){target=_blank} (pdf), October 2020.
-- Omeka S version 2.x [Accessibility Conformance Report using VPAT version 2.0](files/VPAT_OmekaS2-0-1.pdf){target=_blank} (pdf), August 2019.
-- Omeka S version 1.x [Accessibility Conformance Report using VPAT version 1.1](files/VPAT2.0-OmekaS1-1.pdf){target=_blank} (pdf), April 2018.
+- Omeka S 3.x 版本 [无障碍符合性报告，采用 VPAT 2.4 修订国际标准](files/OmekaS3x_ACR.pdf)（PDF），2020 年 10 月。
+- Omeka S 2.x 版本 [无障碍符合性报告，采用 VPAT 2.0 版本](files/VPAT_OmekaS2-0-1.pdf)（PDF），2019 年 8 月。
+- Omeka S 1.x 版本 [无障碍符合性报告，采用 VPAT 1.1 版本](files/VPAT2.0-OmekaS1-1.pdf)（PDF），2018 年 4 月。
 
-The following statements apply to Omeka S version 1.0.1 and higher:
+以下声明适用于 Omeka S 1.0.1 及以上版本：
 
-## Front end (Public view)
+## 前端（公开视图）
 
-The Omeka S themes produced by the Omeka team have the following features to improve accessibility:
+Omeka 团队制作的 Omeka S 主题具备以下有助于无障碍的功能：
 
--   [ARIA](http://www.w3.org/WAI/intro/aria){target=_blank} (Accessible Rich Internet Applications) landmarks for tabbing through page content, when not using a mouse or using a screen reader.
--   Semantic HTML5 markup.
+-   支持 [ARIA](http://www.w3.org/WAI/intro/aria)（无障碍丰富互联网应用）标记，可通过键盘而非鼠标或使用屏幕阅读器浏览页面内容。
+-   使用语义化的 HTML5 标记。
 
-Please note that although the core code for Omeka S conform to the above standards, installations of Omeka S which have been customized or which are using non-RRCHNM modules and themes may lack some or all of these options. While we encourage developers to consider accessibility, we cannot guarantee that their code includes ARIA Landmarks, SkipNav, or other accessibility considerations.
+请注意，尽管 Omeka S 的核心代码符合上述标准，但经过定制或使用非 RRCHNM 模块与主题的 Omeka S 安装实例，可能不具备上述部分或全部无障碍功能。我们鼓励开发者考虑无障碍设计，但无法保证其代码中包含 ARIA 标记、跳转导航（SkipNav）或其他相关功能。
 
-## Back end (Administrative view)
+## 后端（管理视图）
 
-The administrative dashboard of Omeka S has the following features for accessibility:
+Omeka S 的管理控制台具备以下无障碍功能：
 
--   ARIA landmarks for screen readers on the Admin Dashboard, designating the header, navigation, main content, and footers.
--   Semantic HTML5 markup.
+-   在管理控制台中使用 ARIA 标记，帮助屏幕阅读器识别页眉、导航、主要内容和页脚等区域。
+-   使用语义化的 HTML5 标记。
 
-## Accessibility Issues
+## 无障碍问题反馈
 
-If you encounter an issue with accessiblity with the Omeka S core software or Omeka Team developed addons, please report your findings either via a [Forum post](https://forum.omeka.org/c/omeka-s/accessibility/36) or by making an issue in the appropriate Github repository.
+如果您在使用 Omeka S 核心软件或 Omeka 团队开发的插件时遇到无障碍相关问题，请通过 [论坛帖子](https://forum.omeka.org/c/omeka-s/accessibility/36) 或在相应的 Github 仓库中提交问题报告。
