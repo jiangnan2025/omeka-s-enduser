@@ -1,12 +1,12 @@
-# Item Sets
+# Item Sets （资源集合）
 
-Item sets are aggregations of items, similar to collections in Omeka Classic. In Omeka S, items may belong to any number of sets, and an item set can have any number of items.
+资源集合是项目的聚合体，类似于 Omeka Classic 中的集合（collections）。在 Omeka S 中，项目可以属于任意数量的集合，而一个集合也可以包含任意数量的项目。
 
-## Item Set permissions
+## 资源集合权限
 
-When a user creates an item set, they become the "owner" of that item set. Most user levels have the ability to create item sets, and can always delete their own item sets. Only higher levels can delete item sets that others own.
+当用户创建一个资源集合时，该用户即成为该集合的“所有者”。大多数用户级别都有创建集合的权限，且始终可以删除自己创建的集合。只有更高权限级别的用户可以删除其他人拥有的集合。
 
-Users can add items to item sets that are open to additions, and the item sets that they own (regardless of their open or closed status). Global Admins and Supervisors can add any items to any item set.
+用户可以向开放添加状态的集合中添加项目，也可以向自己拥有的集合中添加项目（无论该集合是开放还是关闭状态）。全局管理员和主管可以向任意集合中添加项目。
 
 | Category | Permission | Global Admin | Supervisor | Editor | Reviewer | Author | Researcher |
 |-----|-----|---|---|---|---|---|---|
@@ -16,251 +16,208 @@ Users can add items to item sets that are open to additions, and the item sets t
 | Value annotations | Add/Edit | Yes | Yes | Yes | Yes | Yes | No |
 | Private objects | View | Yes | Yes | Yes | Yes | No | No |
 
-Note that when you change a user's role, for example from an Author to a Researcher, they will still own the item sets they created when they had permission to do so. Item sets are not transferred. Deleting a user orphans their item sets - they will appear as having no owner. Only Global Admins can re-assign ownership of item sets.
+请注意，当你更改用户角色（例如从“作者”更改为“研究人员”）时，他们仍将拥有在具有创建权限时创建的资源集合。资源集合不会转移。删除用户将使其资源集合成为“孤立集合”——即显示为无所有者。只有全局管理员可以重新分配资源集合的所有权。
 
-## The Item Sets tab
+## The Item Sets tab “资源集合”标签页
 
-Item sets are managed via the **Item Sets** tab (the icon of three stacked boxes) located in the left navigation of the admin dashboard.
+资源集合通过管理后台左侧导航栏的 **Item Sets（资源集合）** 标签进行管理（图标为三个堆叠的箱子）。
 
-![Browse item sets view with three item sets.](contentfiles/itemsets_browse.png)
+![浏览视图中有三个资源集合。](contentfiles/itemsets_browse.png)
 
-After clicking on the tab, a table appears listing all item sets with:
+点击该标签后，将显示一个表格，列出所有资源集合，包括：
 
-- the **Title**
-- icons to **edit** (pencil), **delete** (trash can), or **details** (ellipsis)
-- the item set's **Class**
-- the **Owner** of the set
-- the date the set was **Created**.
+* **标题**
+* 编辑（铅笔图标）、删除（垃圾桶图标）或查看详情（省略号图标）
+* 集合的 **类别**
+* 集合的 **所有者**
+* 集合的 **创建日期**
 
-In the top right corner of the Item Sets screen is the "Add new item set" button.
+在资源集合页面的右上角，有一个“添加新资源集合”按钮。
 
-Options for navigating and creating item sets sit in the header of the table of items.
+页面表头区域提供了导航和创建资源集合的选项：
 
-- On the left side are controls for the pages of item sets, with forward and back arrows, and a field to go a specific page of item sets.
-- In the center is the button for **Advanced search**.
-- On the right are options to re-order the table by **title**, **class**, **owner**, or **date created** in either **ascending** or **descending** order.
+* 左侧为页面导航控件，有前进和后退箭头，以及跳转到特定页码的输入框；
+* 中间是 **高级搜索** 按钮；
+* 右侧可按 **标题**、**类别**、**所有者** 或 **创建日期** 升序或降序排列表格。
 
-## View item sets
+## View item sets 查看资源集合
 
-To quickly see information about an item set, click on the "Details" button (the ellipsis icon) for the item set on the item sets browse page. This will open a column on the right hand side of the page with the item set’s title, visibility, and number of items.
+要快速查看某个资源集合的信息，请在资源集合浏览页面点击该集合的“详情”按钮（省略号图标）。页面右侧会展开一个侧边栏，显示集合的标题、可见性和包含的项目数量。
 
-![Drawer view of an item set, with description and title](contentfiles/itemsets_drawer.png)
+![资源集合的抽屉视图，显示标题和描述](contentfiles/itemsets_drawer.png)
 
-To view all the information for an item set, click on its name. On the item sets view page, there are tabs to see an item set’s **Metadata** and **Linked Resources**. On the right side of the item set’s view page is information about the date created, owner, and visibility. For item sets, visibility includes both whether the set is private or public and whether other users can add items to the set.
+要查看资源集合的所有信息，点击其名称即可。在资源集合的详细页面中，有用于查看 **元数据** 和 **关联资源** 的标签页。页面右侧显示创建日期、所有者和可见性信息。资源集合的可见性包括集合是否公开，以及是否允许其他用户向集合中添加项目。
 
-![Reading view of a single item set](contentfiles/itemsets_view.png)
+![单个资源集合的阅读视图](contentfiles/itemsets_view.png)
 
-To view the items in an item set, either click on the number of items in the set on the item set browse page, or click the "View items" button in the upper right corner of the individual item set page.
+要查看集合中的项目，可在浏览页面点击该集合的项目数量，或在集合详情页的右上角点击“查看项目”按钮。
 
-### Linked resources
+### Linked resources 关联资源
 
-An item set's **linked resources** are other Omeka resources (items, item sets, or media) that are [linked to this item set through their properties](#omeka-resource). Note that this section only shows resources that have been linked *to* this item set (which have it for a property); resources that are linked *from* this item will display in the property they fill.
+资源集合的 **关联资源** 是指通过属性与该集合建立连接的其他 Omeka 资源（项目、集合或媒体）。请注意，该部分仅显示将此集合作为属性值的资源；由集合本身引用的资源将在相应属性中显示。
 
-Linked resources are grouped by the property for which they use the current item. In the example below, the current item set "Newspapers" is used for the property "Format" for the linked resources.
+关联资源根据它们使用该集合的属性进行分组。在下图中，当前资源集合“报纸”作为属性“格式”的值被两个资源所引用。
 
-You can filter linked resources to only display those referencing a specific property using the dropdown "Filter by property". It will only display properties actively in use.
+你可以使用下拉菜单“按属性筛选”过滤关联资源，仅显示使用特定属性的资源。仅显示当前实际使用的属性。
 
-![An item set showing the Linked resources tab, where two items are using the item set as a value for the property "Format".](contentfiles/itemsets_linked.png)
+![“关联资源”标签页中有两个项目将资源集合作为“格式”属性的值](contentfiles/itemsets_linked.png)
 
-When an item set is viewed on the public site, all linked resources are displayed in a series of tables based on the metadata property in use. Resources are sorted by resource type (item, item set, or media) and only one type is displayed at a time. An item set without any linked resources will not display these tables; item sets displaying on sites that are set to exclude resources that are not included in the site will also not display these entries.
+在公开网站上查看资源集合时，所有关联资源将以表格形式按使用的元数据属性分组展示。资源按类型（项目、资源集合或媒体）分类，每次仅显示一种类型。若资源集合无任何关联资源，或站点设置为不显示未包含在站点中的资源，则这些表格不会显示。
 
-![An item set display in the Default theme showing a number of Omeka items that link to the item set, as "Format"](contentfiles/itemsets_linked2.png)
+![公开站点中展示与资源集合关联的 Omeka 项目，作为“格式”使用](contentfiles/itemsets_linked2.png)
 
-The display of linked resources on resource pages can be configured on each site. Click on "Theme" and then click the button that reads "[Configure resource pages](../sites/site_theme.md#configure-resource-pages)", then decide if and where to display the "Linked resources" tables for each resource.
+资源页面中关联资源的显示方式可在各站点配置中调整。点击“主题”，然后点击“[配置资源页面](../sites/site_theme.md#configure-resource-pages)”按钮，即可决定是否以及如何显示“关联资源”表格。
 
-You can also control whether resources that are linked will display those links even when the resources in question are not added to the given site. Under [Site settings, in the "Show" section](../sites/site_settings.md#show), you will find a checkbox for "Exclude resources not in site."
+你还可以设置是否显示未添加到当前站点的资源所产生的关联关系。进入 [站点设置的“显示”部分](../sites/site_settings.md#show)，勾选“排除不在站点中的资源”即可。
 
-## Add an item set
+## Add an item set 添加资源集合
 
-To add a new item set, click the **Item Sets** tab from the left-hand navigation of the dashboard. Click the "Add new item set" button on the right hand side of the screen.
+要添加新资源集合，在后台左侧导航中点击 **Item Sets** 标签，再点击右上角的“添加新资源集合”按钮。
 
-By default, a new item set will load with the properties `dcterms:title` and `dcterms:description`. You may add other fields by selecting a property from the list on the right. Browse fields by vocabulary (Dublin Core, Bibliographic Ontology, etc.), or search in the **Filter properties** bar above the list of properties and vocabularies.
+默认情况下，新建资源集合会加载 `dcterms:title` 和 `dcterms:description` 属性。你可以通过右侧属性列表添加其他字段。可按词汇（如 Dublin Core、Bibliographic Ontology 等）浏览，或在 **属性筛选** 框中搜索。
 
-Item sets may use the same resource templates available for items to provide pre-selected fields. Common fields for item sets include a short textual description using `dcterms:Description`. This text (only the first entry, if there are multiple description entries) will display on the "Browse item sets" page by default (found at `youromekaurl/site-slug/item-set`). All metadata fields will display when a user views the item set on the public side (found at `youromekaurl/site-slug/item-set/1`, where "1" is the ID of the item set).
+资源集合可以使用与项目相同的资源模板，为字段预设内容。常见字段包括 `dcterms:Description`，用于简要文本描述。在公共端的“浏览资源集合”页面中将默认显示该字段的首条内容（地址为 `youromekaurl/site-slug/item-set`）。用户访问具体集合页面（如 `youromekaurl/site-slug/item-set/1`）时，将显示所有元数据字段。
 
-You may add other fields by selecting a property from the list on the right. Browse fields by vocabulary (Dublin Core, Bibliographic Ontology, etc.), or search in the **Filter properties** bar above the list of properties and vocabularies.
+你可以通过右侧属性列表添加字段，方法与项目相同。
 
-### Values
-You may add text, a resource from the installation, or an external link in each field.  
+### 值（Values）
 
-![Add item set, no properties selected](contentfiles/itemsets_add.png)
+每个字段中可以添加文本、本地资源或外部链接。
 
-You can set individual property values as Private or Publicly visible using the eye icon for each value. Note that properties set to private are still visible to Global Admins, Site Admins, and Editors. Authors will be able to see all properties on items they own, but will not see private properties created by other users.
+![未选择任何属性时的资源集合添加页面](contentfiles/itemsets_add.png)
 
-In the image below, the first property (Title) is public as indicated by the open eye icon. The second property (Description) is private as indicated by the slashed-through eye icon. Clicking or hitting enter on the eye icon toggles between public and private.
+你可以使用每个值旁边的“眼睛”图标设置该值是公开还是私有。请注意，私有属性仍对全局管理员、站点管理员和编辑可见。作者可以查看其拥有项目的所有属性，但无法查看他人创建的私有属性。
 
-![As described](contentfiles/items_propviz.png)
+下图中，第一个属性（标题）是公开的，图标为睁开的眼睛。第二个属性（描述）是私有的，图标为带斜杠的眼睛。点击图标或按 Enter 可切换状态。
 
-#### Text
+![如图所示](contentfiles/items_propviz.png)
 
-Text fields allow for unformatted text entry. No markup is allowed in these fields (e.g. bold, italic, Markdown, HTML).
+### 文本（Text）
 
-You can indicate the language for the content of an input using the globe symbol above the input. Click on the globe to activate a text field, then enter the [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes){target=_blank} code for the language in which the text is written.
+文本字段接受普通文本输入，支持 Markdown 语法用于添加基本格式（如加粗、斜体、超链接等）。
 
-![The description field with two entries, one in English and one in French, with the two-letter language codes and textual entries in each.](contentfiles/items_lang.png)
+### Omeka 资源（Omeka resource）
 
-#### Omeka resource
+选择“Omeka 资源”类型的值后，您可以为该属性选择一个现有的资源（项目、媒体或资源集合）作为值。点击该字段右侧的浏览图标可打开资源选择器，从中搜索并选择资源。
 
-These fields create an internal link between the resource you are creating and the resource that fills that field.
+例如，您可以使用 `dcterms:source` 字段来链接一个相关的资源集合。
 
-You have the option to use either another item or an item set.
+### URI（统一资源标识符）
 
-Choosing a resource type will open a side drawer where you can browse all of those resources in the installation. You can use the search function at the top of the drawer to narrow down the list or to quickly find a specific item or item set.
+URI 字段允许输入一个标准网址，并可选地添加一个可读标签。Omeka S 将此字段显示为超链接。
 
-Once you select an item or item set, detailed information will load, and you must click "Select resource" to finish linking the resources. You can also click the "X" button in the upper right-hand corner to go back to the list of items or item sets.
+点击字段右侧的图标可切换是否启用标签输入框：
 
-![Select Item menu with list of items to link in edit item view](contentfiles/items_addresource.png)
+![URI 字段及其标签输入](contentfiles/uri_label.png)
 
-If you are using an Item resource for the property, you will have additional options for finding the item you want in the drawer. Open these options by clicking the triangle button next to the phrase "Filter search".
+### 值注释（Value annotation）
 
-This will open a menu below the button with the following options to filter the items in the drawer:
+每个值都可以带有“值注释”，即关于该元数据值的结构化补充说明。这包括：
 
-- Filter by class: a dropdown where you can select any class provided by the vocabularies on the installation
-- Filter by item set: a dropdown where you can limit the items displayed in the drawer to only those associated with a particular item set
-- Filter by item ID: a search field where you can input the ID of the item you want to use. You can find an item's ID in the URL of its edit page; if you are editing the item and the URL is `admin/item/11547/edit` then the item's ID is 11547.
+- **属性**：此注释的元数据类型
+- **类型**：注释的值类型（文本、本地资源或 URI）
+- **值**：注释的具体内容
 
-![options as above described](contentfiles/items_addresItem.png)
+例如，如果您有一个 `dcterms:creator` 值为某位艺术家的项目，您可以添加一个值注释，用以说明该艺术家在特定作品中的具体角色（如“摄影师”）。
 
-Item resources also have an option for "Quick add". When this switch is flipped, all of the items in the drawer have a checkbox. You can use these checkboxes to add multiple items as a property at once. Note that you can only edit one property at a time, so all of the items must populate the same property (e.g. Creator, or Has Part).
+若要添加值注释，点击对应值下方的“添加值注释”按钮，填写相应字段。
 
-![A red arrow points to the slider button for "Quick add". The two items visible have an empty checkbox to the left of their representative thumbnail](contentfiles/items_quickadd.png)
+注释字段与主值字段的填写方式相同，也支持多种类型的值。
 
-#### URI
-URI fields link to an external website or online resource. Every URI value has the link itself, and an optional textual Label to replace the URI with something human-readable. For example, you may wish to enter in a Creator as a URI to a controlled vocabulary of artists or authors, and then include the creator's name in plain text as the Label. Omeka will not automatically pull information from the URI.
+### Access settings 可见性设置
 
-### Value annotation
-When you input a value for a property associated with a resource, you are making a statement about that resource. If you choose, Omeka allows you to make statements about that statement. We call this value annotation. The advantage of value annotation is that you can choose to make ambiguous facts more concrete by annotating things like:
+资源集合的可见性可以设置为“公开”或“私有”。这影响集合本身在前台网站上的显示与否。请注意，集合中的具体项目仍需分别设置其可见性。
 
-- Provenance: Where is this fact from?
-- Time: When did this fact occur?
-- Location: What is the location associated with this fact?
-- Certainty: What is the confidence of this fact?
-- Type: What type of concept/thing is this fact?
+还可以设置是否允许其他用户向此集合中添加项目：
 
-In the world of linked data, this process is know as [reification](https://www.w3.org/wiki/RdfReification){target=_blank}. Each value can have any number of annotations.
+- **关闭**：只有拥有者及高级用户可添加项目
+- **开放**：任何拥有编辑权限的用户都可以添加项目
 
-To create an annotation, click on the ellipsis on the right side of the value input interface, and then click on the annotation icon (the speech bubble).
+设置位于资源集合编辑页面的右侧侧边栏中。
 
-![a detail of the property with the annotation bubble highlighted](contentfiles/annotation_add.png)
+## Edit an item set 编辑资源集合
 
-The annotation sidebar will open to the right. Select any property that is available within the Omeka S installation to describe the relationship between the annotation and the value it describes. For instance, the value for associated with the property `dcterms:Contributor` might be annotated with more detail about the nature of the contribution. Or you may wish to simply include a note using the `dcterms:Description` field.
+在“资源集合”浏览页面中点击集合右侧的铅笔图标，即可进入编辑界面。编辑内容与添加资源集合相同。
 
-Select a data type for the annotation: a text field, a URI, or resource in your Omeka S installation. Modules may make additional data types available. Click the "Add annotation" button and a new field will appear below. Input your annotation. You can do this multiple times for the chosen value if desired. Then click "Set annotations" to finalize the process.
+您还可以在资源集合详细页面中点击右上角的“编辑”按钮。
 
-![A picture of the value annotation sidebar with a property selected and an annotation included](contentfiles/annotation_sidebar.png)
+### Delete an item set 删除资源集合
 
-[Each site has a setting](../sites/site_settings.md#show) to indicate whether or not value annotations are visible to the public. This will include value annotations on items and media.
+要删除资源集合，点击资源集合浏览页面中该集合对应行的垃圾桶图标。
 
-You can set controlled vocabularies for annotations using the [Custom Vocab module](../modules/customvocab.md). In this case, you do not need to apply a custom vocabulary to a property using a resource template; you can select any installed vocabulary from the value-type dropdown in the drawer. This will load your vocabulary's choices into a dropdown of terms.
+删除集合不会删除集合中的项目或媒体，但项目将不再与该集合关联。
 
-![A screenshot of an item entry with an annotation on DC:Contributor, loading a custom vocabulary named "Contributor Annotation Type", and the terms displayed including "Editor," "Translator," "Publishing Organization," and more.](contentfiles/annotation_customvocab.png)
+只有集合所有者、全局管理员或拥有相应权限的用户才能删除集合。
 
-### Advanced
-By default, Omeka S will use the media from the first item added to an item set to generate a thumbnail for the set. If you want to use a non-media image for the thumbnail for an item set you can set it here.
+### Delete an item set 删除资源集合
 
-![Thumbnail tab with no asset selected. The tab displays a message about thumbnail creation and a button to "select" an asset](contentfiles/itemset_thumb1.png)
+你可以删除单个资源集合，或如以下所述批量删除多个资源集合。
 
-The assets you select from and upload as thumbnails in this tab are the same as those created for [site logos](../sites/site_theme.md#logo).
+删除资源集合不会删除与之关联的任何资源项（items）。
 
-To assign an asset as a thumbnail, click on the "Select" button in the main work area of the tab. This will open a drawer on the right side.
+在资源集合浏览视图中，你可以通过点击目标资源集合所在行的垃圾桶图标来删除该资源集合。这将会在右侧打开一个抽屉窗口，顶部显示一条确认删除的消息，下方显示该资源集合的元数据。在该页面点击“确认删除”按钮可完成删除操作，或关闭抽屉窗口以取消操作。
 
-![Select drawer with upload option and two assets, both of which are images.](contentfiles/itemset_thumb2.png)
+![浏览资源集合视图，包含两个集合，并用红色箭头指向垃圾桶图标](contentfiles/itemsets_browseDel.png)
 
-The drawer offers two options: upload a file using your browser, or select from existing assets. To select an existing asset, simply click on it and it will automatically be assigned to the item set.
+![右侧抽屉窗口显示删除确认消息，包括“确认删除”按钮及资源集合的基本描述性元数据，如标题、描述和集合中的资源项数量。](contentfiles/itemsets_browseDel2.png)
 
-![Add item set open to Thumbnail tab, where an asset which is an image of a quill pen on a scrolled piece of paper is in the main work area. Below it are buttons for Select and Clear](contentfiles/itemset_thumb3.png)
+在资源集合的编辑页面，点击右上角的“删除”按钮。此操作同样会在右侧打开一个抽屉窗口，询问你是否确认删除该资源集合。点击“确认删除”以完成操作，或关闭抽屉以取消。
 
-To remove an asset which you have assigned as a thumbnail, click the "Clear" button below the image of the asset. To replace it, click "Select" and either choose or upload a new thumbnail asset.
+![警告抽屉的特写，文字内容为“你确定要删除这个资源集合吗？”，下方为红色的“确认删除”按钮。](contentfiles/itemset-delete2.png)
 
-### Access settings
-Item sets have two settings which control their access. They can be **public** or **not public** and they can be **open** or **closed**.
+## Batch actions 批量操作
 
-Use the **make public/private** button (eye icon) to make the item set visible to the public or only to all users of the Omeka S installation (not public).
+在资源集合的浏览页面（`admin/item-set`）中，你可以通过左上角靠近分页控件的下拉菜单对资源集合进行批量编辑。你可以通过左侧复选框手动选择要批量编辑的集合，或选择页面上全部资源集合，亦可使用下拉菜单选择当前筛选子集中的所有资源集合。
 
-**Open** sets can be edited and added to by any user on the installation.
+编辑者（Editor）、主管（Supervisor）和全局管理员（Global Admin）可以批量编辑和删除安装中的所有资源集合。拥有作者（Author）权限的用户只能批量操作他们自己创建的资源集合，不能操作他人的集合。在这种情况下，即使选择页面上所有集合或全部集合，也仅限于他们自己拥有的资源集合。审核者（Reviewer）无法批量删除所有资源，但可以批量删除选定的资源。
 
-**Closed** sets are available and editable only by its creator, site admins, and global admins.
+![红色箭头指向用于批量编辑和删除选项的下拉菜单](contentfiles/itemsets_batch.png)
 
-Open and Public: ![a set which is open and public, with an open padlock icon and an icon of an open eye](contentfiles/setOpenPublic.png){style="display:inline;"}
+批量操作包括如下几种：
 
-Closed and Private: ![a set which is closed and private, with a closed padlock icon and  an icon of an eye with a slash through it](contentfiles/setClosedPrivate.png){style="display:inline;"}  
+- 编辑所选：仅编辑当前页面中被选中的资源集合
+- 编辑全部：编辑搜索结果中返回的所有资源集合（默认即为全部）
+- 删除所选：仅删除当前页面中被选中的资源集合
+- 删除全部：删除搜索结果中返回的所有资源集合（默认即为全部）
 
-Note that the public/private and open/closed settings operate independently - you can have an open and private item set, for example.
+每页结果数量可在[全局设置](../admin/settings.md#general)中设定。
 
-## Edit an item set
-Once you have created an item set, you can edit it at any time, either by clicking the edit icon (pencil button) or clicking on the item set's title and then clicking the "Edit" button in the upper right-hand corner of the screen.
+你可以先使用“🔍 高级搜索”链接来缩小资源集合范围以进行编辑。例如，可以使用[高级搜索](../search.md#item-advanced-search)限定为某一特定用户所拥有的集合。
 
-Options for editing an item set are the same as for creating an item set.
+执行搜索后，你将返回浏览页面，所选的筛选参数将显示在页面顶部。你可以使用左侧复选框手动选择资源集合，或选择页面上全部集合，或使用下拉菜单操作当前筛选子集中的全部集合。
 
-To cancel out of editing, click the "Cancel" button in the upper right corner, between the "Delete" and "Save" buttons.
+完成批量操作后，你将返回当前资源集合子集的浏览页面。
 
-### Delete an item set
+### 批量编辑
 
-You can delete individual item sets, or batch-delete multiple item sets, as described below.  
+**批量编辑**资源集合会打开一个新页面，正在编辑的集合将显示在右侧抽屉中。请确认所选数量是否正确。
 
-Deleting item sets does not delete any items associated with the item set.
+批量编辑表单包含以下选项：
 
-From the Item Set browse view, you can delete an item set by clicking the trash can icon in the row for the item set you want to delete. This will open a drawer on the right with a message at the top asking you to confirm that you want to delete the item set, with the metadata for the item set below the confirm delete button. Click "Confirm delete" to delete the item set, or close the drawer to cancel.
+- 设置可见性：单选按钮。可选择公开或不公开，以设定未登录用户是否可见该集合。
+- 设置开放性：单选按钮。可选择开放或不开放。开放集合允许安装中的任意用户编辑和添加资源；关闭集合仅限其创建者、站点管理员及全局管理员操作。
+- 设置模板：下拉菜单。可选择安装中的资源模板。可使用“[取消模板]”选项将模板移除。下拉菜单顶部有搜索框支持关键词搜索。
+- 设置类别：下拉菜单。可选择已安装词汇表中的类别。可使用“[取消类别]”选项移除所有类别。下拉菜单顶部同样支持搜索。
+- 设置所有者：下拉菜单。可从安装用户中选择某位用户作为选中集合的所有者。所有权决定[谁可编辑和删除该集合](#item-set-permissions)，不受更高级别[用户权限](../admin/users.md#roles-and-permissions)影响。
+- 清除属性值：下拉菜单及文本字段。可选择所有词汇表中的属性，从所选集合中移除其值。可一次移除多个属性：再次点击文本框即可查看剩余选项。
+- 设置属性可见性：下拉菜单及文本字段，配合单选按钮。设置某个或多个属性的可见性为公开或不公开。与顶部的可见性按钮不同，该选项仅影响所选元数据字段，而非整个集合（例如你可能希望在部分公开集合中隐藏“创建者”字段）。从文本框中选择属性（可键入搜索），然后选择“公开”或“不公开”。可点击文本框添加多个属性，但它们将统一设为“公开”或“不公开”。
 
-![Browse item sets view with two item sets and a red arrow pointing to the trash can icon](contentfiles/itemsets_browseDel.png)
+![批量编辑资源集合表单，显示上述选项](contentfiles/itemsets_batchedit.png)
 
-![Drawer with a confirmation message to delete the an item set, including the Confirm delete button and the item set's basic descriptive metadata - title, description, and number of items in the set. ](contentfiles/itemsets_browseDel2.png)
+此外，批量编辑表单底部提供添加属性值的按钮：
 
-From the edit page for an Item Set, click the "Delete" button in the upper right-hand corner. This will open a drawer on the right side asking you to confirm that you want to delete the item set. Click "Confirm delete" to delete the item set, or close the drawer to cancel.
+- 添加文本值
+- 添加资源值
+- 添加 URI 值
 
-![Close up of the warning drawer, with text stating "Are you sure you would like to delete this item set" and below it a red button with white text stating "Confirm delete".](contentfiles/itemset-delete2.png)
+选择任意一个将添加一个表单区域，你可从安装的词汇表中选择一个属性并为其输入值。
 
-## Batch actions
+![图像展示了“添加文本值”区域，包含“选择属性”的下拉菜单和空白文本字段](contentfiles/itemsets_property.png)
 
-From the browse page of item sets (`admin/item-set`) you can batch edit item sets, using the dropdown menu on the upper left, near the pagination options. You can select item sets manually for batch editing using the checkboxes on the left, or select all of the item sets on the page, or use the dropdown to edit all item sets that are currently in the subset. 
+### 批量删除
 
-Editors, Supervisors, and Global Admins can batch-edit and batch-delete all item sets in the installation. Users that have Author-level permissions can batch-edit or batch-delete their own item sets, but not item sets of others. In this case, selecting all of the item sets on the page, or selecting all item sets, will only include item sets they own. Users at the Reviewer level cannot batch-delete all resources, but can batch-delete selected resources.
+在执行**删除操作**时，右侧将打开一个抽屉窗口，显示将被删除的资源集合数量。除非点击红色“确认删除”按钮，否则不会删除任何内容。该操作无法撤销。若要取消删除，可点击右上角的“X”按钮。若执行“删除全部”操作，还需勾选“你确定吗”复选框（“删除所选”则不需要），然后点击“确认删除”。
 
-![A red arrow points to the dropdown for batch editing and deleting options](contentfiles/itemsets_batch.png)
+注意：删除资源集合不会删除与之关联的资源项。
 
-Batch actions are as follows:  
-
-- Edit selected: edit only the item sets that are selected on the page
-- Edit all: edit all the item sets returned by a search (default is all item sets)
-- Delete selected: delete only the item sets that are selected on the page
-- Delete all: delete all the item sets returned by a search (default is all item sets).
-
-The number of results per page is set in the [installation's global settings](../admin/settings.md#general).
-
-You can first use the "🔍 Advanced search" link to narrow down the item sets to a subset for editing. For example, you can use [Advanced search](../search.md#item-advanced-search) to limit to item sets that are owned by a specific user. 
-
-If you perform a search, you will once again see the browse page, with your selected parameters appearing at the top of the screen. From this browse screen you can select item sets manually for batch editing using the checkboxes on the left, or select all of the item sets on the page, or use the dropdown to edit all item sets that are currently in the subset. 
-
-If you complete a batch action from the next screen, you will return back to this same item set subset. 
-
-### Batch editing
-
-**Batch editing** item sets takes you to a new page. The item sets being edited will display on the right side in a drawer. Be sure to confirm the number of item sets being edited looks correct.
-
-The batch edit form gives you the following options:  
-
-- Set visibility: a radio button. Select from public or not public to make the item set visible or not visible to logged-out users.
-- Set openness: a radio button. Select from open or not open. Open sets can be edited and added to by any user on the install; closed sets are available and editable only by its creator, site admins, and global admins.
-- Set template: a dropdown. Select from the installation's resource templates. You can remove templates from the selected item sets with the "[Unset template]" option. A search bar appears at the top of the dropdown menu if you would like to type to search.
-- Set class: a dropdown. Select from classes of the installed vocabularies. You can remove all classes from the selected item sets with the "[Unset class]" option. A search bar appears at the top of the dropdown menu if you would like to type to search.
-- Set owner: a dropdown. Select from users of the installation to choose who should be set as the owner of the selected item sets. Ownership determines [who can edit and delete those item sets](#item-set-permissions), outside the higher [user permission levels](../admin/users.md#roles-and-permissions).
-- Clear property values: a dropdown and text field, with all the properties in all vocabularies. Selecting from this will remove any values in that property in the affected item sets. You can remove multiple property values at once: click in the text field again to see the remaining options. 
-- Set value visibility: a dropdown and text field, with radio buttons. Set the visibility of a specific property or properties to either public or not public. Unlike the radio buttons at the top of the form, this will only affect one or more metadata fields, instead of the entire item set (for example, you may wish to hide the "Creator" value on some public item sets). Select a property from the text field (type to begin searching), and the choose either the "Public" or "Not public" radio button for this option. You can add multiple properties by clicking again within the text field, but they will all become either "Public" or "Not public".
-
-![Batch edit items form, with options as described above.](contentfiles/itemsets_batchedit.png)
-
-In addition, you can use the bottoms at the bottom of the batch edit form to add properties to every item set:
-
-- Add text value
-- Add resource value
-- Add URI value.  
-
-Selecting any of these will add a block to the form where you can select a property from the installed vocabularies and enter the value for that property.
-
-![Image depicts only the Add text value block of the batch edit form, with a dropdown labeled "select property" above an empty text field](contentfiles/itemsets_property.png)
-
-### Batch deleting
-
-For the **delete actions**, a drawer will open on the right side of the screen telling you the number of item sets which will be deleted. Nothing will be deleted unless you click the red "Confirm Delete" button. This action cannot be undone. To opt out of deleting the item sets, click the "X" in the upper right corner of the deletion drawer. To confirm delete, check the "Are you sure" checkbox (for "Delete all" but not "Delete selected") and then click "Confirm Delete". Note that deleting the item set will not delete the items associated with that set.
-
-![Close up of the warning, with the text describing the number of items to be deleted in red.](contentfiles/itemsets_bulkdelete.png)
+![警告内容特写，红色字体显示将要删除的资源集合数量](contentfiles/itemsets_bulkdelete.png)
