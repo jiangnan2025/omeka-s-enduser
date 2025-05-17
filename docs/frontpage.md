@@ -1,15 +1,15 @@
-# Front Page
+# Front Page  首页
 
-Omeka S allows users to build multiple distinct sites within one installation that are not necessarily connected to each other. Each installation has, by default, a front page that lists all of the sites in the installation. This page is accessed by going to the main URL of your Omeka S installation; if your [admin dashboard](admin-dashboard.md) was at `yourdomain.org/omekas/admin`, then you would find this page at `yourdomain.org/omekas/`.
+Omeka S 允许用户在同一安装中构建多个独立的站点，这些站点彼此之间不一定相互关联。每个安装默认都有一个首页，列出安装中的所有站点。访问该页面的方法是进入 Omeka S 安装的主网址；如果你的[管理员后台](admin-dashboard.md)地址是 `yourdomain.org/omekas/admin`，那么这个首页的网址就是 `yourdomain.org/omekas/`。
 
-The page displays all sites that a user has permission to see, along with the sites' summaries & thumbnails if they exist. If someone is not logged in, they will only see public sites. A logged-in Global Administrator, by contrast, would see all existing sites on the installation.
+该页面会显示用户有权限查看的所有站点，以及这些站点的简介和缩略图（如果存在）。未登录用户只能看到公开站点。相比之下，已登录的全局管理员会看到安装中的所有现有站点。
 
-![Installation front page for the "Stackable Sandbox" showing seven sites, three of which have summaries.](files/frontpage-basic.png)
+![“Stackable Sandbox”安装首页，显示七个站点，其中三个有简介。](files/frontpage-basic.png)
 
-If you want this index page to be hidden from site visitors, a Global Administrator can select one public site on your installation to which visitors will be redirected when they navigate to your base URL (`yourdomain.net/omekas/`). To do so:
+如果你希望访客无法看到这个索引页，全局管理员可以选择安装中的某个公开站点，访客在访问基础网址（`yourdomain.net/omekas/`）时会被重定向到该站点。操作步骤如下：
 
-- Go to Settings (the gear icon), then the General tab.
-- Under the "Default site" option, use the dropdown menu to select one of your current sites. 
-- To remove a selected site and revert back to the index page, click the small "X" on the right side of the dropdown.
+- 进入设置（齿轮图标），然后点击“常规”标签页。
+- 在“默认站点”选项下，使用下拉菜单选择你当前的某个站点。
+- 若要移除已选择的站点并恢复显示索引页，点击下拉菜单右侧的小“X”。
 
-You can customize a branded site index for your installation by creating a site, creating a page, and then using the ["List of sites" page block](sites/site_pages.md#page-blocks) to generate a list of all the sites in the installation. Then, use the "Default site" option to point to that site.
+你还可以通过创建一个站点、创建一个页面，并使用[“站点列表”页面模块](sites/site_pages.md#page-blocks)生成安装中所有站点的列表，来定制一个品牌化的站点索引页。然后，通过“默认站点”选项指向该站点即可。
