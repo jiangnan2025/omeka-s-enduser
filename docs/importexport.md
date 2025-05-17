@@ -1,32 +1,24 @@
-# Importing and Exporting
+# 导入与导出
 
-There are numerous methods for importing to, or exporting from, an Omeka S site. Third-party modules may add more functionality; we are only documenting Omeka-team-supported methods here. 
+Omeka S 网站有多种导入和导出方法。第三方模块可能提供更多功能；这里仅记录由 Omeka 团队支持的方法。
 
-## Connect to another Omeka site
+## 连接到另一个 Omeka 站点
 
-### Import from Classic to S
+### 从 S 导入到 S
 
-You can use the [Omeka Classic Importer module](modules/omekaCimporter.md) to import items & collections from a Classic site. This module only imports items and their metadata (including tags), attached files, and collections (as item sets). It will not import Simple Page content or Exhibit Builder content.
+您可以使用 [Omeka S Item Importer 模块](modules/ositemimporter.md) 将项目和项目集从一个 Omeka S 安装导入到另一个。无法导入站点及其页面。建议在导入前将目标站点尽可能设置得与源站点相近，包括安装并激活所有相同的模块，以及安装使用的词汇表。
 
-If equivalent plugins/modules are installed on both the source site and the target site, Omeka Classic Importer can import module-specific metadata. For example, geolocation data facilitated by the Mapping module in S and the Geolocation plugin in Classic will automatically be imported; [PDF Text](https://omeka.org/classic/plugins/PdfText/){target=_blank} elements can be imported and mapped to [Extract Text](https://omeka.org/s/modules/ExtractText/){target=_blank} fields.
+### 导入或导出资源模板
 
-You cannot currently export from an Omeka S site to a Classic site. 
+[您可以通过导出和导入在 Omeka S 安装之间共享资源模板。](https://omeka.org/s/docs/user-manual/content/resource-template/#share-resource-templates)
 
-### Import from S to S
+### 导入或导出自定义词汇表
 
-You can use the [Omeka S Item Importer module](modules/ositemimporter.md) to import items and item sets from one Omeka S installation to another. You cannot import sites and their pages. We suggest setting up the target site as closely as possible to the source site, including installing and activating all the same modules, and installing any vocabularies used, before performing an import.
+[您可以通过导出和导入在 Omeka S 安装之间共享自定义词汇表。](https://omeka.org/s/docs/user-manual/modules/customvocab/#manage-custom-vocabs)
 
-### Import or export resource templates 
+## 连接到非 Omeka 平台
 
-[You can share a resource template between Omeka S installations by exporting and importing them.](https://omeka.org/s/docs/user-manual/content/resource-template/#share-resource-templates)
-
-### Import or export custom vocabularies
-
-[You can share custom vocabularies between Omeka S installations by exporting and importing them.](https://omeka.org/s/docs/user-manual/modules/customvocab/#manage-custom-vocabs)
-
-## Connect to non-Omeka platforms
-
-Omeka S has modules for importing resources from: 
+Omeka S 拥有用于从以下平台导入资源的模块：
 
 - [Zotero](modules/zoteroimport.md)
 - [Zenodo](modules/datarepositoryconnector.md)
@@ -34,50 +26,49 @@ Omeka S has modules for importing resources from:
 - [DSpace](modules/dspaceconnector.md)
 - [CKAN](modules/datarepositoryconnector.md)
 - [Dataverse](modules/datarepositoryconnector.md)
-- [Invenio](modules/datarepositoryconnector.md). 
+- [Invenio](modules/datarepositoryconnector.md)。
 
-### Import from a spreadsheet
+### 从电子表格导入
 
-Omeka S can take data in any spreadsheet (tabular) form, whether a CSV, an Excel file, or an ODS. Use the [CSV Import module](modules/csvimport.md) to add items, item sets, media, and users to your Omeka S site from a spreadsheet. This includes data exported from many different databases and platforms. 
+Omeka S 可接受任何电子表格（表格）格式的数据，无论是 CSV、Excel 文件还是 ODS。使用 [CSV Import 模块](modules/csvimport.md) 从电子表格向 Omeka S 网站添加项目、项目集、多媒体和用户。这包括从许多不同数据库和平台导出的数据。
 
-First, look to see if there a connector or importer module for the platform you are looking to export from. Omeka S has modules for Zotero, Zenodo, Fedora, DSpace, CKAN, Dataverse, and Invenio. If there is no specific module, export the data from your source platform into a spreadsheet. This may require some modification or cleanup of the data before importing into Omeka S. 
+首先，查看是否存在针对您要导出的平台的连接器或导入模块。Omeka S 支持 Zotero、Zenodo、Fedora、DSpace、CKAN、Dataverse 和 Invenio 的模块。如果没有特定模块，请将源平台的数据导出为电子表格。导入 Omeka S 之前，可能需要对数据进行一些修改或清理。
 
-### Export to a spreadsheet
+### 导出到电子表格
 
-Exporting resources from Omeka S is possible by using a Python script to query the installation's API. You can use this to copy your Omeka S materials to another platform, or as a backup of your work.
+可以通过使用 Python 脚本查询安装的 API 来导出 Omeka S 资源。您可以用它将 Omeka S 的材料复制到其他平台，或作为工作备份。
 
-[Omeka-s-csv.py](https://github.com/omeka/omeka-s-csv.py){target=_blank} is a Python script that exports data from Omeka S installations in CSV format.
+[Omeka-s-csv.py](https://github.com/omeka/omeka-s-csv.py){target=_blank} 是一个将 Omeka S 安装中的数据导出为 CSV 格式的 Python 脚本。
 
-Outputted spreadsheets will have column headings for metadata terms in alphabetical order: `dcterms:description`, `dcterms:title`, etc. 
+导出后的电子表格将按字母顺序有元数据术语的列标题：`dcterms:description`、`dcterms:title` 等。
 
-There will also be a section of `o:` columns, including the internal Omeka S ID (`o:id`), the internal IDs of items' attached media (`o:media`), privacy settings (`o:is_public`, with values of "TRUE" or "FALSE"), created and modified dates, owners, sites, and other resource data. At the end will be `thumbnail` columns containing the URLs to media thumbnails generated by the installation. 
+还会有一部分以 `o:` 开头的列，包括内部 Omeka S ID (`o:id`)、项目附加多媒体的内部 ID (`o:media`)、隐私设置 (`o:is_public`，值为 "TRUE" 或 "FALSE")、创建和修改日期、所有者、站点及其他资源数据。最后是包含安装生成的媒体缩略图 URL 的 `thumbnail` 列。
 
-This script cannot export site or page information, nor will it export resource templates, vocabularies, or other data stored in modules (such as Inverse Properties settings on resource templates). 
+此脚本无法导出站点或页面信息，也不会导出资源模板、词汇表或存储于模块中的其他数据（例如资源模板上的反属性设置）。
 
-#### Requirements
+#### 需求
 
-omeka-s-csv.py works with either Python 2 or 3, and requires no additional or external dependencies.
+omeka-s-csv.py 支持 Python 2 和 3，无需额外或外部依赖。
 
-Linux users will likely have Python already installed, and packages should be available from your distribution. There are several options for installing Python on Windows and Mac, including downloading an installer [from Python's website](https://www.python.org/downloads/).
+Linux 用户通常已安装 Python，相关软件包可从发行版获得。Windows 和 Mac 用户有多种安装 Python 的选择，包括从 [Python 官网](https://www.python.org/downloads/) 下载安装程序。
 
-#### Export
+#### 导出
 
-In a terminal in the folder where `omeka-s-csv.py` is located on your system, run the script:
+在系统中存放 `omeka-s-csv.py` 文件的文件夹内打开终端，运行脚本：
 
 ```
 python3 omeka-s-csv.py
 ```
+（也可以根据系统使用 `./omeka-s-csv.py`、`python omeka-s-csv.py` 或 `python2 omeka-s-csv.py`。）
 
-(This can also be done, depending on the system, as `./omeka-s-csv.py`, `python omeka-s-csv.py`, or `python2 omeka-s-csv.py`.)
+脚本会提示输入要导出的 Omeka S API 端点。这是指向目标 Omeka S 安装的 URL，应以 `http://` 或 `https://` 开头，以 `/api` 结尾。
 
-The script will prompt you for the Omeka S API endpoint you want to export from. This is a URL pointing to the target Omeka S installation, and should start with `http://` or `https://` end with `/api`.
+接着，会提示输入 API 密钥。导出非公开数据需要密钥，但仅导出公开数据时可以留空，按回车即可。
 
-Next, you will be prompted for an API key. Keys are required to export non-public data from the site, but are optional if you're only exporting public data. If you're not using a key, you can leave the input blank and just press "Enter".
+最后，会提示输入“分隔符”，用于在单个 CSV 单元格中分隔多条数据。请确保所选字符不出现在实际数据中。默认是“竖线”字符（`|`），通常是安全选择。按回车使用默认，否则输入您希望使用的分隔符。
 
-Finally, a prompt will ask you to enter a "separator," a character that will be used to separate multiple pieces of data in a single CSV cell. It's important that the chosen separator is a character that doesn't appear in the actual data. The default choice is the "pipe" character (`|`), which is usually a safe option. To use that default choice, press "Enter"; otherwise, type the separator character you want to use instead.
+脚本将运行，并显示进度。导出结果文件位于与 `omeka-s-csv.py` 文件相同的文件夹内：`items.csv`、`item_sets.csv` 和 `media.csv`。
 
-The script will then run, and show output indicating its progress. The exported results will be placed in files in the same folder as the `omeka-s-csv.py` file: `items.csv`, `item_sets.csv`, and `media.csv`.
+### 使用 API 访问数据
 
-### Access data using the API
-
-You can use your own S site's API to crawl data as required, rather than exporting a spreadsheet for a one-time use. Note that you can [request different formats through the API](https://omeka.org/s/docs/developer/api/rest_api/#responses){target=_blank}, including `jsonld` and `rdfxml`. [For more information on the API, see the developer documentation section.](https://omeka.org/s/docs/developer/api/){target=_blank}
+您也可以直接使用自己 S 站点的 API 按需抓取数据，而非一次性导出电子表格。注意，API 支持[请求不同格式](https://omeka.org/s/docs/developer/api/rest_api/#responses){target=_blank}，包括 `jsonld` 和 `rdfxml`。[更多 API 信息，请参阅开发者文档部分。](https://omeka.org/s/docs/developer/api/){target=_blank}
