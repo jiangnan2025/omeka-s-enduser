@@ -1,72 +1,76 @@
-#  Sites Management
+# 网站管理
 
-Sites are the public-facing side of an Omeka S installation. With sites you can create content and interpretation around a group of items from your installation. 
+网站是 Omeka S 安装中面向公众的部分。使用网站可以围绕安装中的一组资源创建内容和诠释。
 
-Sites are managed and accessed via the "Sites" link on the left-hand side of the administrative dashboard. 
+可以通过管理后台左侧的“网站（Sites）”链接进行网站的管理和访问。
 
-![Manage sites view, showing Sites button link on the left, the Add New button, and the table of sites with eight sites listed](../sites/sitesfiles/sites_admin.png)
+![网站管理视图，显示左侧的 Sites 按钮链接、右上角的新增按钮，以及包含八个网站的表格](../sites/sitesfiles/sites_admin.png)
 
-The Sites page displays a table with all the sites for the installation, giving the title and owner for each site. 
+“网站”页面显示了一个包含所有网站的表格，表格中列出了每个网站的标题和所有者。
 
-Use the two drop-downs on the right side above the table to sort your sites. You can sort by **title**, **URL slug**, or **owner**, either ascending or descending. Click the "Sort" button to apply your choices. 
+在表格右上方有两个下拉菜单，用于对网站进行排序。你可以按**标题**、**URL 简称（slug）**或**所有者**排序，可选择升序或降序。点击“排序”按钮以应用你的选择。
 
-Above the table of sites, on the left, is the pagination for the sites table.
+表格左上方提供了分页功能。
 
-Each row gives the title of a site on the left, the URL in the middle, and the display name of the site's owner on the right. Each site has options to **view** (the box with the outward arrow), **edit** (the pencil), or **delete** (the trash can). **Only global admins and site owners can delete a site.**
+每一行显示网站标题（左）、URL（中）和所有者的显示名称（右）。每个网站都有**查看**（带箭头的框）、**编辑**（铅笔图标）或**删除**（垃圾桶图标）的选项。**只有全局管理员和网站所有者可以删除网站。**
 
-Sites that are not public will have the **private** icon (an eye with a slash through it) display to the right of the site title. 
+未公开的网站在标题右侧会显示**私密**图标（带斜杠的眼睛图案）。
 
-Clicking on the site title will take you to a summary page for the site which displays the site’s **URL slug**, **title**, **theme**, and the **thumbnail image** associated with the site. You can return to the site list, or "Edit" or "View" the site using buttons in the upper right. You will also see the left-hand menu expand to display the management options for the site.
+点击网站标题可进入该网站的概览页面，显示该网站的**URL 简称**、**标题**、**主题**和**缩略图**。你可以使用右上角的按钮返回网站列表，或“编辑”或“查看”该网站。左侧菜单也会展开，显示该网站的管理选项。
 
-![show page for the site "What Does This Look Like" indicating that the theme is default and the slug is public views.](../sites/sitesfiles/sites_quickshow.png)
+![名为"What Does This Look Like"的网站概览页面，主题为 default，URL 简称为 public views](../sites/sitesfiles/sites_quickshow.png)
 
-## Add a site
-To create a site, click the "Add new site" button in the upper right-hand corner of the site browse page.
+## 添加网站
 
-The "New site" page has two tabs: **Info** and **Theme**.
+要创建网站，请点击网站浏览页面右上角的“添加新网站（Add new site）”按钮。
 
-### Info tab
+“新网站”页面有两个选项卡：**信息（Info）** 和 **主题（Theme）**。
 
-* Give your site a **title** (required).
-* Create a **slug** for the site’s URL (optional). The URL for this site will be `youromekainstall.org/s/slug`. If you leave this field blank, Omeka S will create a slug based on the site title.
-* Create a **summary** for your site: a brief description of what it is about (optional). The summary text will appear on your installation's landing page and on the [list of sites](site_pages.md#list-of-sites) page block.
-* Upload a **thumbnail** for your site, or select one from your installation's assets (optional). This will appear alongside the summary text on the landing page and in the [list of sites page block](site_pages.md#list-of-sites). We recommend using a small image, no more than 240 pixels wide (the largest it will display, on the landing page). You can also [set a favicon for your site later](site_settings.md#general-settings).
+### 信息选项卡
 
-![Admin tab for a new site with nothing entered](../sites/sitesfiles/siteadd_admin.png)
+* 为网站设置一个**标题**（必填）。
+* 为网站创建一个**简称 slug**（可选）。网站的 URL 将为 `youromekainstall.org/s/slug`。如果留空，Omeka S 会根据标题自动生成 slug。
+* 为网站添加**摘要**：即对网站内容的简要描述（可选）。该摘要将在你的安装首页及[网站列表](site_pages.md#list-of-sites)页面模块中显示。
+* 上传网站的**缩略图**或从已上传的资源中选择一张（可选）。缩略图将与摘要一起出现在首页和[网站列表页面模块](site_pages.md#list-of-sites)中。建议使用宽度不超过 240 像素的小图（首页显示时的最大宽度）。你也可以[稍后设置网站图标 favicon](site_settings.md#general-settings)。
 
-### Theme tab
-Select from the [installed themes](site_theme.md). Each theme appears as a tile with a screenshot of the theme, the theme name, and a link to its creator. When a theme is selected, it will highlight in gray and a checkbox will appear in the bottom right corner of the tile.
+![新网站的管理页面，尚未填写内容](../sites/sitesfiles/siteadd_admin.png)
 
-![Theme tab with default theme selected](../sites/sitesfiles/siteadd_theme.png)
+### 主题选项卡
 
-### Publication
-In the upper right corner of the screen, next to the "Add" button, you can set the visibility of your site by clicking on the eye icon to make the site public or private.
+从已[安装的主题](site_theme.md)中选择一个。每个主题以一个图块形式呈现，包含该主题的截图、名称和创作者链接。选中某个主题后，该图块会变灰，并在右下角显示一个复选框。
 
-Site is public: ![make public button showing an eye icon](../content/contentfiles/item_public.png){style="display:inline;"}
+![已选择默认主题的主题选项卡](../sites/sitesfiles/siteadd_theme.png)
 
-Site is private: ![make private button showing an eye icon with a diagonal slash through it](../content/contentfiles/item_private.png){style="display:inline;"}
+### 发布设置
 
-Sites are created as public by default. You will probably want to make the site private until you have finished configuring it and added some content.
+在页面右上角“添加”按钮旁边，你可以通过点击眼睛图标设置网站是**公开**还是**私密**。
 
-When you are ready, click the "Add" button in the upper right corner. You cannot save a draft site, but you can make the site private while you finish working on it. Once the site is created, you will be redirected to the site's Info tab. 
+网站为公开状态： ![公开按钮，显示眼睛图标](../content/contentfiles/item_public.png){style="display:inline;"}
 
-If you decide you do not want to create this site, click the "Cancel" button in the upper right next to the "Add" button.
+网站为私密状态： ![私密按钮，显示带斜杠的眼睛图标](../content/contentfiles/item_private.png){style="display:inline;"}
 
-## Manage sites
-To manage a site, navigate to the **Sites** screen from the admin dashboard. Click either on the site’s title or the edit button (pencil icon) in the list of sites. 
+网站默认创建为公开状态。在配置完成并添加内容前，你可能希望将其设为私密。
 
-This will take you to the site's Info tab, and open the context menu for that site in the left-hand navigation. 
+准备就绪后，点击右上角的“添加”按钮。你无法保存网站草稿，但可以在配置期间将其设为私密。网站创建后将自动跳转到信息选项卡。
 
-The context menu for every site has the site title at the top, with an icon of a computer (the site icon) to the left. To the right of the site title is a view button (box with escaping arrow). Clicking the view button will open the public side of the site in a new tab or window.
+若决定不创建该网站，可点击“添加”按钮旁的“取消”按钮。
 
-![Context menu for the site "Mysteries", with two modules installed](../sites/sitesfiles/sites_menu.png)
+## 管理网站
 
-Site admin left hand navigation options are: 
+要管理网站，请从管理后台进入**网站（Sites）**页面。点击网站标题或编辑按钮（铅笔图标）即可。
 
-- [Site admin](../sites/site_settings.md)
-- [Pages](../sites/site_pages.md)
-- [Navigation](../sites/site_navigation.md) 
-- [Resources](../sites/site_resources.md)
-- [User permissions](../sites/site_users.md)
-- [Theme](../sites/site_theme.md)
-- Settings added by modules, if installed.
+系统将跳转到该网站的信息选项卡，并在左侧导航栏中展开该网站的上下文菜单。
+
+每个网站的上下文菜单顶部显示网站标题，左侧是电脑图标（表示网站），右侧是查看按钮（带箭头的框）。点击查看按钮将在新标签页或窗口中打开该网站的公共视图。
+
+![名为"Mysteries"的网站的上下文菜单，显示安装了两个模块](../sites/sitesfiles/sites_menu.png)
+
+网站管理左侧导航栏包含以下选项：
+
+- [网站设置（Site admin）](../sites/site_settings.md)
+- [页面（Pages）](../sites/site_pages.md)
+- [导航（Navigation）](../sites/site_navigation.md)
+- [资源（Resources）](../sites/site_resources.md)
+- [用户权限（User permissions）](../sites/site_users.md)
+- [主题（Theme）](../sites/site_theme.md)
+- 若安装模块，可能会显示由模块添加的设置项。
