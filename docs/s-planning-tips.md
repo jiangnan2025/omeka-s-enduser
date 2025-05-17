@@ -1,121 +1,122 @@
-# Planning Tips
+# 规划技巧
 
-## The basics
+## 基础知识
 
-A brand-new Omeka S installation comes with several pre-designed page types ready to share:
+全新安装的 Omeka S 自带多种预设页面类型，随时可供分享：
 
-- When you add a new site, you can choose an installed theme right away, or allow it to use the "Default" theme. 
-- The navigation of your first S site will come loaded with a "Browse" page for exploring items. You can quickly add the pre-installed "Welcome" page, which showcases some text formatting styles. 
-- Once you add your first item, you will be able to view the "[item view page](content/items.md#public-views-for-items)". Customize this from the "Configure resource pages" button on the "Theme" tab. There is a separate page layout for viewing media attached to items.
-- When you begin sorting items into item sets, you can add a similar "Browse item sets" page to your navigation, and customize a similar "item set view" page. 
-- Depending on the theme you choose, these resource pages may have their own pre-configured blocks. Most themes will by default display: 
-	- for items: a full-size embedding of the media, the item's metadata sorted by schema, a list of item sets and site pages where the item appears, and then a list of all the item's attached media with small thumbnails;
-	- for media: a full-size rendering of the media, then the media's metadata; 
-	- for item sets: the item set's metadata, then a browsing grid or list of the set's contents.
-- The pages for browsing items and items sets each link to [an Advanced Search form](search.md#public-views), as does the search bar at the top of your site.
+- 添加新站点时，可以立即选择已安装的主题，也可以使用“默认”主题。
+- 你创建的第一个 S 站点的导航栏中，会预置一个“浏览”页面，用于浏览条目。你也可以快速添加预装的“欢迎”页面，展示一些文本格式样式。
+- 添加第一个条目后，你可以查看“[条目查看页面](content/items.md#public-views-for-items)”。可以通过“主题”标签下的“配置资源页面”按钮进行定制。查看附加媒体的页面布局是单独设计的。
+- 开始将条目分类到条目集后，你可以为导航栏添加类似的“浏览条目集”页面，并定制相应的“条目集查看”页面。
+- 根据所选主题，这些资源页面可能自带预配置的区块。大多数主题默认显示：
+  - 条目页：媒体的全尺寸嵌入，按模式排序的条目元数据，包含该条目的条目集和站点页面列表，所有附加媒体的缩略图列表；
+  - 媒体页：媒体的全尺寸展示，媒体元数据；
+  - 条目集页：条目集元数据，条目集内容的网格或列表浏览。
+- 浏览条目和条目集的页面均链接到[高级搜索表单](search.md#public-views)，顶部搜索栏也如此。
 
-In Omeka S, you build your [sites](sites/index.md) page by page, using resources you've added to your installation. You should begin planning your site before you start adding resources at scale, but we suggest experimenting with a few sample items and item sets to get a feel for the way Omeka handles them.
+在 Omeka S 中，你通过逐页构建[站点](sites/index.md)，使用已添加的资源。建议你在大量添加资源前先规划站点，建议先尝试一些样本条目和条目集，熟悉 Omeka 的资源处理方式。
 
-What follows are some questions and ideas to help guide you as you plan your sites in Omeka S.
+以下是一些问题和思路，帮助你规划 Omeka S 站点。
 
-## Site audience and goals
+## 站点受众和目标
 
-**Who is the primary audience of this site?** Being specific will help you shape the site; "people interested in historic architecture" is much more useful than "the general public." Do you have secondary audiences? What do you want these specific audiences to accomplish when they come to the site?
+**这个站点的主要受众是谁？** 明确受众有助于塑造站点；“对历史建筑感兴趣的人”比“公众”更具体且有效。是否有次要受众？你希望特定受众访问站点时完成什么目标？
 
-**What are the goals of your site?** What do you want your specific audiences to accomplish when they come to the site? What do you want people to take away from the site? What content do you want to highlight?
+**你的站点目标是什么？** 你希望特定受众访问站点时完成什么？你希望访客从站点获得什么？你想重点展示哪些内容？
 
-## Resources
+## 资源
 
-**What will you do with items in this website?**
-[Items](content/items.md) are the building blocks of Omeka S. What sort of [resource templates](content/resource-template.md) will you want to create and use to fully describe your items? Any item you include on an Omeka S will have a public item show page, so try to ensure that the information in an item's metadata can stand on its own. 
+**你打算如何使用本网站的条目？**  
+[条目](content/items.md)是 Omeka S 的构建基石。你想创建并使用哪些[资源模板](content/resource-template.md)来完整描述条目？任何条目都会有公开展示页面，确保条目元数据能独立表达信息。
 
-**What will you do with item sets?**
-You can use [item sets](content/item-sets.md) to group items to be included on a [site](sites/index.md), and they can be a way to guide visitors' browsing on your sites. For some sites, item sets are robust resources themselves.
+**你打算如何使用条目集？**  
+你可以用[条目集](content/item-sets.md)将条目分组，包含在[站点](sites/index.md)中，帮助引导访客浏览。对某些站点来说，条目集本身也是丰富资源。
 
-How do you want to group items into sets? What metadata fields will your item sets use? Do your item sets have relations to each other or to items?
+你如何分组条目？条目集将使用哪些元数据字段？条目集之间或与条目之间是否存在关联？
 
-**What do you want your data to do?**
-What properties are you going to want to consistently describe in your site? Do you want some of these to display with a different label - for example 'author' instead of 'creator' for books? Use a [resource template](content/resource-template.md) and change the label of the property.
+**你希望数据如何表现？**  
+你会想在站点中统一描述哪些属性？是否想为某些属性显示不同标签，例如图书的“作者”替代“创作者”？使用[资源模板](content/resource-template.md)可更改属性标签。
 
-In Omeka S, items and item sets can use other resources - items, item sets, and media - as properties; for example, you can make an item for William Shakespeare and have that item fill the 'creator' property for a 'Hamlet' item. How can your resources use this functionality?
+在 Omeka S 中，条目和条目集可以用其他资源（条目、条目集、媒体）作为属性；例如，你可以创建“威廉·莎士比亚”的条目，并将该条目作为《哈姆雷特》的“创作者”属性。你的资源如何利用这项功能？
 
-Do you want to use a set of terms (controlled vocabulary) for certain items? You might want to use [Custom Vocab](modules/customvocab.md). Or do you want to use a terms list created by the Library of Congress or the Getty? Then you might use [Value Suggest](modules/valuesuggest.md).
+是否想为某些条目使用一组术语（受控词表）？你可以使用[Custom Vocab](modules/customvocab.md)。或者想使用美国国会图书馆或盖蒂的词表？可用[Value Suggest](modules/valuesuggest.md)。
 
-## Building a site
-With Omeka S, you can built your sites from scratch or quickly set up our in-built pages. It's also easy to use multiple sites to accomplish your goals. 
+## 构建站点
 
-**What pages do you want to include?** What kind of content do you want on these pages? How do you want to arrange them? Try sketching out a sample menu or wireframes for the site. Look at example sites by other organizations or people. Use those as guides as you build your pages.
+使用 Omeka S，你可以从零开始搭建站点，或快速使用内置页面。也可以用多个站点实现目标。
 
-Pages are made up of rearrangable [blocks](sites/site_pages.md#page-blocks), which can include text, images, and much more. What kind of content do you want on the pages you build? How do you want people to access and interpret your collections?
+**你想包含哪些页面？** 页面内容是什么？如何排列？可以先绘制菜单草图或线框图，参考其他组织或个人的示例站点，作为建设指南。
 
-**How do you want to interact with your visitors on your site?** Do you want to [collect](modules/collecting.md) resources from your visitors? Allow them to [share](modules/sharing.md) your content on social media? 
+页面由可重排的[区块](sites/site_pages.md#page-blocks)组成，区块可包含文本、图片等多种内容。你希望页面包含什么内容？访客如何访问和理解你的馆藏？
 
-Will you allow [users to create accounts](admin/users.md) on your site, and let them add their own items, metadata, or exhibits?
+**你想如何与访客互动？** 是否想从访客处[收集](modules/collecting.md)资源？允许他们在社交媒体上[分享](modules/sharing.md)内容？
 
-## Suggested modules
-The Omeka Team and our community of open-source developers have created hundreds of modules to extend the Omeka S core functionality. To assist administrators in installing and configuring Omeka S so that it is geared toward particular types of work, below are some suggested collections of modules:
+你是否允许[用户注册账户](admin/users.md)，让他们添加条目、元数据或展览？
 
-### Publishing digital collections
+## 推荐模块
+Omeka 团队及开源社区开发了数百个模块，扩展 Omeka S 核心功能。为方便管理员针对特定工作类型安装配置，以下是一些推荐模块集：
 
-- Describing resources 
-    - [Extract Metadata](https://omeka.org/s/modules/ExtractMetadata/){target=_blank}: Extract embedded metadata from files, such as EXIF data from photographs.
-    - [Extract Text](https://omeka.org/s/modules/ExtractText/){target=_blank}: Extract text from files (PDFs, word documents, images) to make them searchable.   
-    - [Custom Vocab](https://omeka.org/s/modules/CustomVocab/){target=_blank}: Describe your resources using vocabularies you create.
-    - [Value Suggest](https://omeka.org/s/modules/ValueSuggest/){target=_blank}: Describe your resources using auto-suggested values from controlled vocabulary services. 
-    - [Numeric Data Types](https://omeka.org/s/modules/NumericDataTypes/){target=_blank}: Add data types for numbers and dates. 
-- Importing resources
-    - [CSV Import](https://omeka.org/s/modules/CSVImport/){target=_blank}: Import and update content (items, item sets, media, users) from a CSV, a TSV, or an ODS file. 
-    - [File Sideload](https://omeka.org/s/modules/FileSideload/){target=_blank}: Add files that are already on your server to items. 
-    - Other importers include from DSpace, Fedora, Dataverse, Invenio, Zenodo, Zotero, or from existing Omeka Classic or S collections.
-- Increasing discoverability
-    - [Mapping](https://omeka.org/s/modules/Mapping/){target=_blank}: Geolocate your items to one or more mapped locations.
-    - [Sharing](https://omeka.org/s/modules/Sharing/){target=_blank}: Offer OpenGraph metadata, so your Omeka S links display beautifully on social media.
-    - [Resource Meta](https://omeka.org/s/modules/ResourceMeta/){target=_blank}: Make your resources' metadata machine-readable.
-    - [Persistent Identifiers](https://omeka.org/s/modules/PersistentIdentifiers/){target=_blank}: Create/import/assign DOIs or ARKs to items.
-    - [IIIF Presentation](https://omeka.org/s/modules/IiifPresentation/){target=_blank}: Offer your resources using the IIIF Presentation API.
-- Displaying resources
-    - [Faceted Browse](https://omeka.org/s/modules/FacetedBrowse/){target=_blank}: Add more fine-grained browsing tools to your collections.
-    - [Metadata Browse](https://omeka.org/s/modules/MetadataBrowse/){target=_blank}: Browse resources that share the same metadata.
-    - [URI Dereferencer](https://omeka.org/s/modules/UriDereferencer/){target=_blank}: Display authority control metadata from external URIs. 
+### 发布数字馆藏
 
-In addition to these basic groups of modules, you may be interest in the following specific types of functionality.
+- 描述资源
+  - [Extract Metadata](https://omeka.org/s/modules/ExtractMetadata/)：提取文件内嵌元数据，如照片 EXIF。
+  - [Extract Text](https://omeka.org/s/modules/ExtractText/)：从文件（PDF、Word 文档、图片）提取文本，实现可搜索。
+  - [Custom Vocab](https://omeka.org/s/modules/CustomVocab/)：用自定义词汇描述资源。
+  - [Value Suggest](https://omeka.org/s/modules/ValueSuggest/)：使用受控词表服务的自动建议值描述资源。
+  - [Numeric Data Types](https://omeka.org/s/modules/NumericDataTypes/)：添加数字和日期类型。
+- 导入资源
+  - [CSV Import](https://omeka.org/s/modules/CSVImport/)：从 CSV、TSV 或 ODS 文件导入更新内容（条目、条目集、媒体、用户）。
+  - [File Sideload](https://omeka.org/s/modules/FileSideload/)：将服务器上的文件添加到条目。
+  - 其它导入器支持 DSpace、Fedora、Dataverse、Invenio、Zenodo、Zotero 及 Omeka Classic 或 S 集合。
+- 提升可发现性
+  - [Mapping](https://omeka.org/s/modules/Mapping/)：将条目地理定位到一个或多个地图位置。
+  - [Sharing](https://omeka.org/s/modules/Sharing/)：提供 OpenGraph 元数据，令 Omeka S 链接在社交媒体展示美观。
+  - [Resource Meta](https://omeka.org/s/modules/ResourceMeta/)：使资源元数据机器可读。
+  - [Persistent Identifiers](https://omeka.org/s/modules/PersistentIdentifiers/)：创建/导入/分配 DOI 或 ARK。
+  - [IIIF Presentation](https://omeka.org/s/modules/IiifPresentation/)：通过 IIIF Presentation API 提供资源。
+- 展示资源
+  - [Faceted Browse](https://omeka.org/s/modules/FacetedBrowse/)：为馆藏添加细粒度浏览工具。
+  - [Metadata Browse](https://omeka.org/s/modules/MetadataBrowse/)：浏览共享相同元数据的资源。
+  - [URI Dereferencer](https://omeka.org/s/modules/UriDereferencer/)：展示外部 URI 的权威控制元数据。
 
-### Modeling complex data
+此外，你可能对以下特定功能感兴趣。
 
-- Describing resources
-    - [Data Cleaning](https://omeka.org/s/modules/DataCleaning/){target=_blank}: Low-level auditing and cleaning of resource metadata.
-    - [Inverse Properties](https://omeka.org/s/modules/InverseProperties/){target=_blank}: Define reciprocal relations between properties.
-- Private data
-    - [Hide Properties](https://omeka.org/s/modules/HideProperties/){target=_blank}: Hide properties on the administrative or public side.
-    - [Redact Values](https://omeka.org/s/modules/RedactValues/){target=_blank}: Redact values so that they are not visible to the public.
-    - [View Private Resources](https://omeka.org/s/modules/ViewPrivateResources/){target=_blank}: Allow lower user roles to view private resources.
-- Displaying data
-    - [Data Visualization](https://omeka.org/s/modules/Datavis/){target=_blank}: Visualize information about your collections and items.
-    - [Mapping](https://omeka.org/s/modules/Mapping/){target=_blank}: Geolocate your items to one or more mapped locations; includes a timeline for displaying items chronologically.
+### 复杂数据建模
 
-### Community sourcing
+- 描述资源
+  - [Data Cleaning](https://omeka.org/s/modules/DataCleaning/)：低级别资源元数据审核与清理。
+  - [Inverse Properties](https://omeka.org/s/modules/InverseProperties/)：定义属性间的互逆关系。
+- 私有数据
+  - [Hide Properties](https://omeka.org/s/modules/HideProperties/)：在管理端或公开端隐藏属性。
+  - [Redact Values](https://omeka.org/s/modules/RedactValues/)：编辑值以屏蔽公开显示。
+  - [View Private Resources](https://omeka.org/s/modules/ViewPrivateResources/)：允许低权限用户查看私有资源。
+- 数据展示
+  - [Data Visualization](https://omeka.org/s/modules/Datavis/)：可视化馆藏及条目信息。
+  - [Mapping](https://omeka.org/s/modules/Mapping/)：地理定位条目并配合时间轴按时间展示。
 
-- Public contributions
-    - [Collecting](https://omeka.org/s/modules/Collecting/){target=_blank}: Add collecting forms to your sites. Integrates with Mapping, Numerica Data Types, Custom Vocab, Value Suggest.
-- Transcription
-    - [Scripto](https://omeka.org/s/modules/Scripto/){target=_blank}: Transcribe and translate items.
-    - [DataScribe](https://omeka.org/s/modules/Datascribe/){target=_blank}: Allows community visitors to transcribe structured data.
+### 社区协作
 
-### Geospatial and Temporal
+- 公开贡献
+  - [Collecting](https://omeka.org/s/modules/Collecting/)：为站点添加采集表单。支持 Mapping、Numeric Data Types、Custom Vocab、Value Suggest。
+- 转录
+  - [Scripto](https://omeka.org/s/modules/Scripto/)：转录及翻译条目。
+  - [DataScribe](https://omeka.org/s/modules/Datascribe/)：允许社区访客转录结构化数据。
 
-- Describing Resources
-    - [Mapping](https://omeka.org/s/modules/Mapping/){target=_blank}: Add location info to your items and sites.
-    - [Numeric Data Types](https://omeka.org/s/modules/NumericDataTypes/){target=_blank}: Add data types for numbers and dates. Allows for the creation of timelines in conjunction with Mapping.
-   
-### Working with other digital systems
+### 地理空间与时间
 
-- Institutional Repositories
-    - [Data Repository Connector](https://omeka.org/s/modules/DataRepositoryConnector/){target=_blank} includes Zenodo, Dataverse, Invenio, and CKAN
-    - [DSpace Connector](https://omeka.org/s/modules/DspaceConnector/){target=_blank}
-    - [Fedora Connector](https://omeka.org/s/modules/FedoraConnector/){target=_blank}
-- Other Omeka installations
-    - [Omeka Classic Importer](https://omeka.org/s/modules/Omeka2Importer/){target=_blank}
-    - [Omeka S Item Importer](https://omeka.org/s/modules/Osii/){target=_blank}
+- 描述资源
+  - [Mapping](https://omeka.org/s/modules/Mapping/)：为条目和站点添加位置信息。
+  - [Numeric Data Types](https://omeka.org/s/modules/NumericDataTypes/)：添加数字和日期类型。可配合 Mapping 创建时间轴。
+
+### 与其他数字系统协作
+
+- 机构存储库
+  - [Data Repository Connector](https://omeka.org/s/modules/DataRepositoryConnector/)：支持 Zenodo、Dataverse、Invenio、CKAN
+  - [DSpace Connector](https://omeka.org/s/modules/DspaceConnector/)
+  - [Fedora Connector](https://omeka.org/s/modules/FedoraConnector/)
+- 其他 Omeka 安装
+  - [Omeka Classic Importer](https://omeka.org/s/modules/Omeka2Importer/)
+  - [Omeka S Item Importer](https://omeka.org/s/modules/Osii/)
 - Zotero
-    - [Zotero Citation](https://omeka.org/s/modules/ZoteroCitations/){target=_blank}: Use Zotero to generate citations and bibliographies.
-    - [Zotero Importer](https://omeka.org/s/modules/ZoteroImport){target=_blank}: Import items and files from Zotero user and group libraries.
+  - [Zotero Citation](https://omeka.org/s/modules/ZoteroCitations/)：使用 Zotero 生成引用和参考文献。
+  - [Zotero Importer](https://omeka.org/s/modules/ZoteroImport)：从 Zotero 用户和组库导入条目和文件。
