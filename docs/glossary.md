@@ -1,42 +1,41 @@
-# Glossary
+# Glossary 术语表
 
-The following glossary should help to clarify some of the less-familiar terms in Omeka S. Where appropriate, we have provided a roughly analogous term from Omeka Classic, although some analogies are stronger than others. 
+以下术语表旨在帮助澄清 Omeka S 中一些不太熟悉的术语。
 
+**Class（类）**：由 Vocabulary 定义的一种资源类型。通常，Vocabulary 期望特定的属性（Properties）与特定的类（Classes）配合使用。例如，`foaf:Person` 不会有 `dcterms:publisher` 属性，但可以预期有 `foaf:familyName` 属性。  
+*Omeka Classic 类比*：Item Type（项目类型）。
 
-**Class**: A kind of Resource, as defined by a Vocabulary. Often, Vocabularies expect particular Properties to be used with particular Classes. For example, a `foaf:Person` would not have a `dcterms:publisher` Property, but could be expected to have a `foaf:familyName` Property.  
-*Omeka Classic analogy*: Item Type.
+**File（文件）**：上传到 Omeka S 并直接关联到某个 Item 的数据（参见 Media）。  
+*Omeka Classic 类比*：File（文件，但类比较弱）。
 
-**File**: Data uploaded to an Omeka S installation and associated directly with an Item (see also: Media).    
-*Omeka Classic analogy*: File (but the analogy is weak).
+**Global Admin（全局管理员）**：控制一切的管理员，通常是创建该安装实例的人。  
+*Omeka Classic 类比*：Superuser（超级用户）。
 
-**Global Admin**: An administrator who controls everything, and is typically the person who created the Installation.  
-*Omeka Classic analogy*: Superuser.
+**Installation（安装实例）**：Omeka S 的一个实例。通常由机构的中央 IT 部门负责安装，并可能为他人创建站点。
 
-**Installation**: An instance of Omeka S. Typically, a central IT department of an institution does the process of installing, and probably also creates sites for others.
+**Item（项目）**：用于构建 Omeka S 站点的记录。Item 可在安装实例中的任意站点共享，除非明确排除共享。  
+*Omeka Classic 类比*：Item（项目）。
 
-**Item**: The records used to build an Omeka S Site. Items are shared and available to any Site in an Installation, unless explicitly excluded from sharing.  
-*Omeka Classic analogy*: Item.
+**Item Set（项目集合）**：Item 的聚合体。一个 Item 可以属于任意多个 Item Set。  
+*Omeka Classic 类比*：Collection（集合）；带有相同标签的 Items。
 
-**Item Set**: An aggregation of Items. Items can belong to any number of Item Sets.  
-*Omeka Classic analogy*: Collection; Items with the same tag.
+**Media（媒体）**：Item 的额外表现或描述，超出词汇表中元数据的内容。通常指文件（任意类型，包括文本或 HTML 片段），也可以指外部数据源，如 YouTube 视频、Slideshare 幻灯片、Dspace 流等。  
+*Omeka Classic 类比*：File（文件，但类比较弱）。
 
-**Media**: Additional representations or descriptions of an Item, beyond metadata from vocabularies. Typically, this refers to a File (of any type, including, e.g., text or HTML snippets), but could also refer to external data sources such as a YouTube video, Slideshare deck, Dspace bitstream, etc.  
-*Omeka Classic analogy*: File (but the analogy is weak).
+**Module（模块）**：Omeka S 安装的附加组件，用于扩展功能。模块可增加后台的数据录入选项和交互，并为站点添加新功能。  
+*Omeka Classic 类比*：Plugin（插件）。
 
-**Module**: An add-on to your Omeka S installation which extends the functionality of Omeka S. Modules can add options to data entry and interaction on the back end and add new features to your sites.  
-*Omeka Classic analogy*: Plugin.
+**Property（属性）**：一种定义过的元数据类型，用于描述资源。最常见的是 `dcterms:title`，表示项目的人类可读标题。属性的值（Values）可以是用于人类或其他智能体阅读的文本（“Literal”），也可以是资源（此处指 Omeka S 内部资源）或外部 URI（例如指向 DBpedia 资源页的 URI）。  
+*Omeka Classic 类比*：Element（元素）。
 
-**Property**: A defined — to one degree or another — kind of metadata used to describe a Resource. The most common is dcterms:title, for the written, human-readable title of an Item. The Values for Properties can be written language intended for humans or other sentient beings to read (‘Literals’), Resources (understood here as internal to an Omeka S installation), or External URIs (e.g., a URI to a DBpedia resource page).  
-*Omeka Classic analogy*: Element.
+**Resource Template（资源模板）**：一组预定义的属性，且可选一个类，用于指导 Item 的创建和属性的解释。典型用法是为如 `foaf:Person` 创建模板，使得使用该模板的 Item 显示预期或期望的 `foaf:` 属性输入，并将该 Item 的类设为 `foaf:Person`。  
+*Omeka Classic 类比*：Item Type（项目类型，但类比较弱）。参见 Class。
 
-**Resource Template**: A set of pre-defined Properties, and optionally a Class, to use to guide Item creation and interpretation of Properties. Typical usage is to create a template for, e.g., a `foaf:Person` that makes Items using that template show the inputs for the expected or desired `foaf: properties`, and sets the Class of the Item to `foaf:Person`.  
-*Omeka Classic analogy*: Item Type (but the analogy is weak). Cf. Class.
+**Site Admin（站点管理员）**：Omeka S 安装中单个站点的管理员。  
+*Omeka Classic 类比*：Superuser role（超级用户角色）。
 
-**Site Admin**: An administrator of a single Site within an Omeka S Installation.  
-*Omeka Classic analogy*: Superuser role.
+**Value（值）**：填充资源-属性-值三元组的实际数据。如果属性是 `dcterms:title`，合理的值可能是 “Heart of Darkness”。Literal 值可能还带有该值所用语言的信息。值也可以是资源或指向外部数据的 URI（优选返回 RDF 数据的 URI，但这点并不强制）。  
+*Omeka Classic 类比*：Element Text（元素文本）。
 
-**Value**: The actual data that fills out the Resource-Property-Value triple. If the property is `dcterms:title`, a reasonable Value might be "Heart of Darkness". Literal Values might also have information about the language in which that Value is expressed attached. Values can also be Resources or URIs to external data (preferably URIs that return RDF data, but I don’t think we’re going to enforce that).   
-*Omeka Classic analogy*: Element Text.
-
-**Vocabulary**: A collection of published RDF metadata Classes and Properties for describing a Resource. These exist and are created externally to Omeka, and can be imported (with some limitations) into Omeka S for use throughout the Installation. The most-used Vocabulary is Dublin Core Terms (`dcterms:`).  
-*Omeka Classic analogy*: Element Set.
+**Vocabulary（词汇表）**：用于描述资源的已发布 RDF 元数据类和属性的集合。它们存在于 Omeka 外部，可以（有限制地）导入 Omeka S 以供整个安装实例使用。最常用的词汇表是 Dublin Core Terms (`dcterms:`)。  
+*Omeka Classic 类比*：Element Set（元素集）。
